@@ -1,0 +1,188 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "./variables.scss";
+
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/input-group";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/spinners";
+
+a {
+  text-decoration: none;
+  color: $primary;
+}
+
+.btn, b {
+  font-weight: 600!important;
+}
+
+.btn, .cursor-pointer {
+  cursor: pointer;
+}
+
+.btn-link, .btn-link:hover, .btn-link:not(:disabled):not(.disabled):active, .btn-link:not(:disabled):not(.disabled).active, .show > .btn-link.dropdown-toggle {
+  color: $primary;
+  background-color: transparent;
+  border-color: transparent;
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-link:not(:disabled):not(.disabled):active:focus, .btn-link:not(:disabled):not(.disabled).active:focus, .show > .btn-link.dropdown-toggle:focus {
+  box-shadow: none;
+  text-decoration: underline;
+}
+
+.btn-link:disabled, .btn-link.disabled {
+  color: $secondary;
+  background-color: transparent;
+  border-color: transparent;
+  pointer-events: none;
+}
+
+h1 {
+  font-size: 2rem;
+  word-break: break-word;
+}
+
+h2 {
+  font-size: 1.8rem;
+  word-break: break-word;
+}
+
+h3 {
+  font-size: 1.5rem;
+  word-break: break-word;
+}
+
+h4 {
+  font-size: 1.2rem;
+  word-break: break-word;
+}
+
+h5 {
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+h6 {
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+.fs-1 {
+  font-size: 2rem;
+}
+
+.fs-2 {
+  font-size: 1.8rem;
+} 
+
+.fs-3 {
+  font-size: 1.5rem;
+}
+
+.fs-4 {
+  font-size: 1.2rem;
+}
+
+.fs-5 {
+  font-size: 1rem;
+}
+
+.fs-6 {
+  font-size: 0.9rem;
+}
+
+.text-color-1 {
+   color: #333333;
+}
+
+.text-color-2 {
+  color: #666666;
+}
+
+.text-color-3 {
+  color: #999999;
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.font-weight-600 {
+  font-weight: 600;
+}
+
+.border-thick {
+  border-width: 2px !important;
+}
+
+.border-bottom-primary {
+  border-bottom: 2px solid $primary !important;
+}
+
+.zig-zag {
+  background: url('/Assets/zigzag.svg');
+  background-repeat: repeat-x;
+  background-size: 18px 13px;
+  display: block;
+  width: 100%;
+  height: 13px;
+
+  @media screen and (min-width: 992px) {
+    background-size: 22px 16px;
+    height: 16px;
+  }
+}
+
+.zig-zag.bottom {
+  transform: rotate(180deg);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 1px;
+}
+::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.form-control-lg {
+  height: calc(1.5rem + 1.4rem + 2px)
+}
+
+.container {
+  margin: 0px;
+  width: 100%;
+  max-width: 1140px;
+  @media screen and (min-width: 1140px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.list-section {
+  height: calc(100% - 30px);
+  overflow-y: scroll;
+  position: relative;
+}
