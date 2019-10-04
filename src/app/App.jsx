@@ -16,9 +16,14 @@ function App() {
       </Row>
       <Row>
         <ErrorHandler>
-          <p>Something Went wrong</p>
-          <BuggyCounter />
-          <BuggyCounter />
+          <p>This counter has a limited count let/s see where it fails</p>
+          <Col>
+            <BuggyCounter />
+          </Col>
+          <Col>Hello its test Component</Col>
+          <Col>
+            <BuggyCounter />
+          </Col>
         </ErrorHandler>
       </Row>
     </Container>

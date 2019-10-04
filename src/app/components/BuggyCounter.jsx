@@ -19,7 +19,7 @@ class BuggyCounter extends Component {
     if (counter === 5) {
       throw new Error('I crashed');
     }
-    return <Button onClick={this.handleClick}>{counter}</Button>;
+    return <Button block onClick={this.handleClick}>{counter}</Button>;
   }
 }
 
