@@ -12,41 +12,48 @@ import BuggyCounter from './components/BuggyCounter';
 import TestReact from './components/TestReact';
 import './App.scss';
 
-function App() {
-  return (
-    <Container fluid className="App">
-      <Router>
-        <Row>
-          <Col>
-            <h4>Test React App</h4>
-          </Col>
-          <Col>
-            <Link to="/">Home</Link>
-          </Col>
-          <Col>
-            <Link to="/counter">Buggy Counter</Link>
-          </Col>
-        </Row>
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { };
+  }
 
-        <Row>
-          <Switch>
-            <Route path="/counter">
-              <ErrorHandler>
-                <Col sm="auto">It is a buggy counter</Col>
-                <Col sm="auto">
-                  <BuggyCounter />
-                </Col>
-              </ErrorHandler>
-            </Route>
-            <Route path="/">
-              <TestReact />
-            </Route>
-          </Switch>
-        </Row>
+  render() {
+    return (
+      <Container fluid className="App">
+        <Router>
+          <Row>
+            <Col>
+              <h4>Test React App</h4>
+            </Col>
+            <Col>
+              <Link to="/">Home</Link>
+            </Col>
+            <Col>
+              <Link to="/counter">Buggy Counter</Link>
+            </Col>
+          </Row>
 
-      </Router>
-    </Container>
-  );
+          <Row>
+            <Switch>
+              <Route path="/counter">
+                <ErrorHandler>
+                  <Col sm="auto">It is a buggy counter</Col>
+                  <Col sm="auto">
+                    <BuggyCounter />
+                  </Col>
+                </ErrorHandler>
+              </Route>
+              <Route path="/">
+                <TestReact />
+              </Route>
+            </Switch>
+          </Row>
+
+        </Router>
+      </Container>
+    );
+  }
 }
 
 export default App;
