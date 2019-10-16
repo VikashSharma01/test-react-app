@@ -10,17 +10,20 @@ import {
 import ErrorHandler from './components/ErrorHandler';
 import BuggyCounter from './components/BuggyCounter';
 import TestReact from './components/TestReact';
+import MouseTracker from './components/MouseTracker';
 import './App.scss';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
+    // this.myRef = React.createRef();
     this.state = { };
   }
 
   render() {
     return (
       <Container fluid className="App">
+        {/* <div ref={console.log(this.myRef)} /> */}
         <Router>
           <Row>
             <Col>
@@ -37,12 +40,19 @@ class App extends React.Component {
           <Row>
             <Switch>
               <Route path="/counter">
-                <ErrorHandler>
-                  <Col sm="auto">It is a buggy counter</Col>
-                  <Col sm="auto">
-                    <BuggyCounter />
+                <Row>
+                  <ErrorHandler>
+                    <Col sm="auto">It is a buggy counter</Col>
+                    <Col sm="auto">
+                      <BuggyCounter />
+                    </Col>
+                  </ErrorHandler>
+                </Row>
+                <Row>
+                  <Col>
+                    <MouseTracker />
                   </Col>
-                </ErrorHandler>
+                </Row>
               </Route>
               <Route path="/">
                 <TestReact />
