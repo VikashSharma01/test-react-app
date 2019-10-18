@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
+// import SuspenceApiTest from './FnComponentSuspenceApiTest';
 
 class TestReact extends Component {
   constructor(props) {
