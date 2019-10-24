@@ -1,27 +1,37 @@
 import React, { Component } from 'react';
 import './Calculator.scss';
-// import PropTypes from 'prop-types';
 import {
   Container, Form, Row, Col, ButtonToolbar, ButtonGroup, Button,
 } from 'react-bootstrap';
+// import { eval } from 'mathjs'
+import * as math from 'mathjs';
 
 class Calculator extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      buttonVal: '',
+      inputVal: '',
     };
   }
 
   handleClick = (event) => {
-    const { buttonVal } = this.state;
+    const { inputVal } = this.state;
     this.setState({
-      buttonVal: buttonVal + event.target.name,
+      inputVal: inputVal + event.target.name,
     });
   }
 
-  handleCalculate = (event) => {
-    console.log(event.target.name);
+  handleCalculate = () => {
+    const { inputVal } = this.state;
+    this.setState({
+      inputVal: math.evaluate(inputVal),
+    });
+  }
+
+  handleClear = () => {
+    this.setState({
+      inputVal: '',
+    });
   }
 
   render() {
@@ -29,10 +39,10 @@ class Calculator extends Component {
       <Container className="shadow-lg bg-white">
         <Row>
           <Col>
-            {/* {this.state.buttonVal} */}
+            {/* {this.state.inputVal} */}
             <Form>
               <Form.Group controlId="formBasicEmail">
-                <Form.Control value={this.state.buttonVal} className="py-3" type="text" placeholder="" />
+                <Form.Control value={this.state.inputVal} className="py-3" type="text" placeholder="" />
               </Form.Group>
             </Form>
           </Col>
@@ -65,9 +75,9 @@ class Calculator extends Component {
             </ButtonToolbar>
             <ButtonToolbar aria-label="Toolbar with button groups" className="">
               <ButtonGroup className="w-100" aria-label="First group">
-                <Button name="." onClick={this.handleClick} className="left-corner-first-button" variant="outline-info" block>.</Button>
+                <Button onClick={this.handleClear} className="left-corner-first-button" variant="outline-danger" block>CE</Button>
                 <Button name="0" onClick={this.handleClick} variant="outline-info" block>0</Button>
-                <Button name="=" onClick={this.handleCalculate} variant="outline-info" block>=</Button>
+                <Button onClick={this.handleCalculate} variant="outline-success" block>=</Button>
                 <Button name="/" onClick={this.handleClick} variant="info" block>/</Button>
               </ButtonGroup>
             </ButtonToolbar>
