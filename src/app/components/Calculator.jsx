@@ -12,7 +12,7 @@ class Calculator extends Component {
 
   render() {
     return (
-      <Container className="shadow-lg bg-light">
+      <Container className="shadow-lg bg-white">
         <Row>
           <Col>
             <Form>
@@ -26,34 +26,34 @@ class Calculator extends Component {
           <Col>
             <ButtonToolbar aria-label="Toolbar with button groups" className="">
               <ButtonGroup className="w-100" aria-label="First group">
-                <Button className="left-corner-first-button" variant="outline-info" block>1</Button>
-                <Button variant="outline-info" block>2</Button>
-                <Button variant="outline-info" block>3</Button>
-                <Button variant="outline-info" block>+</Button>
+                <Button value="1" className="left-corner-first-button" variant="outline-info" block>1</Button>
+                <Button value="2" variant="outline-info" block>2</Button>
+                <Button value="3" variant="outline-info" block>3</Button>
+                <Button value="+" variant="outline-info" block>+</Button>
               </ButtonGroup>
             </ButtonToolbar>
             <ButtonToolbar aria-label="Toolbar with button groups" className="">
               <ButtonGroup className="w-100" aria-label="First group">
-                <Button className="left-corner-first-button" variant="outline-info" block>4</Button>
-                <Button variant="outline-info" block>5</Button>
-                <Button variant="outline-info" block>6</Button>
-                <Button variant="outline-info" block>-</Button>
+                <Button value="4" className="left-corner-first-button" variant="outline-info" block>4</Button>
+                <Button value="5" variant="outline-info" block>5</Button>
+                <Button value="6" variant="outline-info" block>6</Button>
+                <Button value="-" variant="outline-info" block>-</Button>
               </ButtonGroup>
             </ButtonToolbar>
             <ButtonToolbar aria-label="Toolbar with button groups" className="">
               <ButtonGroup className="w-100" aria-label="First group">
-                <Button className="left-corner-first-button" variant="outline-info" block>7</Button>
-                <Button variant="outline-info" block>8</Button>
-                <Button variant="outline-info" block>9</Button>
-                <Button variant="outline-info" block>*</Button>
+                <Button value="7" className="left-corner-first-button" variant="outline-info" block>7</Button>
+                <Button value="8" variant="outline-info" block>8</Button>
+                <Button value="9" variant="outline-info" block>9</Button>
+                <Button value="*" variant="outline-info" block>*</Button>
               </ButtonGroup>
             </ButtonToolbar>
             <ButtonToolbar aria-label="Toolbar with button groups" className="">
               <ButtonGroup className="w-100" aria-label="First group">
-                <Button className="left-corner-first-button" variant="outline-info" block>.</Button>
-                <Button variant="outline-info" block>0</Button>
-                <Button variant="outline-info" block>=</Button>
-                <Button variant="outline-info" block>/</Button>
+                <Button value="." className="left-corner-first-button" variant="outline-info" block>.</Button>
+                <Button value="0" variant="outline-info" block>0</Button>
+                <Button value="=" variant="outline-info" block>=</Button>
+                <Button value="/" variant="outline-info" block>/</Button>
               </ButtonGroup>
             </ButtonToolbar>
           </Col>

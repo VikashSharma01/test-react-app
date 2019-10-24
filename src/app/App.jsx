@@ -13,8 +13,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <Container fluid className="App">
-        <h2 className="calculator">Calculator</h2>
+      <Container className="App">
+        <h2 className="calculator">Calculator </h2>
         <Row>
           <Col><Calculator /></Col>
         </Row>
