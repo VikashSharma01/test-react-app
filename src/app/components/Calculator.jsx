@@ -35,14 +35,14 @@ class Calculator extends Component {
   }
 
   render() {
+    const { inputVal } = this.state;
     return (
       <Container className="shadow-lg bg-white">
         <Row>
           <Col>
-            {/* {this.state.inputVal} */}
             <Form>
               <Form.Group controlId="formBasicEmail">
-                <Form.Control value={this.state.inputVal} className="py-3" type="text" placeholder="" />
+                <Form.Control value={inputVal} className="py-3" type="text" placeholder="" />
               </Form.Group>
             </Form>
           </Col>
