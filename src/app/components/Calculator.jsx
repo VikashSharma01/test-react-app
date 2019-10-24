@@ -3,7 +3,6 @@ import './Calculator.scss';
 import {
   Container, Form, Row, Col, ButtonToolbar, ButtonGroup, Button,
 } from 'react-bootstrap';
-// import { eval } from 'mathjs'
 import * as math from 'mathjs';
 
 class Calculator extends Component {
