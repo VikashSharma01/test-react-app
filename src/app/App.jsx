@@ -1,66 +1,23 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/theme.scss';
 import {
-  BrowserRouter as Router, Link, Switch, Route,
-} from 'react-router-dom';
-import {
-  Container, Row, Col,
+  Container, Col, Row,
 } from 'react-bootstrap';
-import ErrorHandler from './components/ErrorHandler';
-import BuggyCounter from './components/BuggyCounter';
-import TestReact from './components/TestReact';
-import MouseTracker from './components/MouseTracker';
+import Calculator from './components/Calculator';
 import './App.scss';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    // this.myRef = React.createRef();
     this.state = { };
   }
 
   render() {
     return (
       <Container fluid className="App">
-        {/* <div ref={console.log(this.myRef)} /> */}
-        <Router>
-          <Row>
-            <Col>
-              <h4>Test React App</h4>
-            </Col>
-            <Col>
-              <Link to="/">Home</Link>
-            </Col>
-            <Col>
-              <Link to="/counter">Buggy Counter</Link>
-            </Col>
-          </Row>
-
-          <Row>
-            <Switch>
-              <Route path="/counter">
-                <Row>
-                  <ErrorHandler>
-                    <Col sm="auto">It is a buggy counter</Col>
-                    <Col sm="auto">
-                      <BuggyCounter />
-                    </Col>
-                  </ErrorHandler>
-                </Row>
-                <Row>
-                  <Col>
-                    <MouseTracker />
-                  </Col>
-                </Row>
-              </Route>
-              <Route path="/">
-                <TestReact />
-              </Route>
-            </Switch>
-          </Row>
-
-        </Router>
+        <div>Calculator</div>
+        <Row>
+          <Col><Calculator /></Col>
+        </Row>
       </Container>
     );
   }
