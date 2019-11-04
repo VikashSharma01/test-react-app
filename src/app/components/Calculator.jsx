@@ -41,7 +41,7 @@ class Calculator extends Component {
           <Col>
             <Form>
               <Form.Group controlId="formBasicEmail">
-                <Form.Control value={inputVal} className="py-3" type="text" placeholder="" />
+                <Form.Control readOnly value={inputVal} className="py-3" type="text" placeholder="" />
               </Form.Group>
             </Form>
           </Col>
