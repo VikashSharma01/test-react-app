@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux';
-import { ADD_TODO, TOGGLE_TODO } from './Actions';
+import { ADD_TODO } from './Actions';
 
-const initState = [];
+// const initState = [];
 
-function todos(state = initState, action) {
+function todos(state = [], action) {
+//   console.log(action.type);
   switch (action.type) {
     case ADD_TODO:
       return [
@@ -13,13 +14,6 @@ function todos(state = initState, action) {
           completed: false,
         },
       ];
-    case TOGGLE_TODO:
-      return state.map((todo, index) => {
-        if (index === action.index) {
-          return { ...todo, completed: !todo.completed };
-        }
-        return todo;
-      });
     default:
       return state;
   }
