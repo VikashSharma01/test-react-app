@@ -1,26 +1,36 @@
-import { combineReducers } from 'redux';
+// import { combineReducers } from 'redux';
 import { ADD_TODO } from './Actions';
 
-// const initState = [];
+const initState = {
+  count: 0,
+  add: '',
+};
 
-function todos(state = [], action) {
-//   console.log(action.type);
+function aSimplereducer(state = initState, action) {
+  console.log(action);
   switch (action.type) {
-    case ADD_TODO:
-      return [
+    case 'INC':
+      return {
         ...state,
-        {
-          text: action.text,
-          completed: false,
-        },
-      ];
+        count: state.count + 1,
+      };
+    case 'DEC':
+      return {
+        ...state,
+        count: state.count - 1,
+      };
+    case ADD_TODO:
+      return {
+        ...state,
+        add: `${state.add.concat(action.add)}`,
+      };
     default:
       return state;
   }
 }
 
-const todoApp = combineReducers({
-  todos,
-});
+// const todoApp = combineReducers({
+//   aSimplereducer,
+// });
 
-export default todoApp;
+export default aSimplereducer;

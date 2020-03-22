@@ -3,7 +3,7 @@ import {
   Row, Col, Container, Form, Button,
 } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 
 class AddTodo extends React.PureComponent {
   constructor(props) {
@@ -21,11 +21,8 @@ handleChange = (e) => {
 
 handleAdd = () => {
   const { todoItem } = this.state;
-  const { dispatch } = this.props;
-  dispatch({
-    type: 'ADD_TODO',
-    add: todoItem,
-  });
+  const { addTodo } = this.props;
+  addTodo(todoItem);
   this.setState({ todoItem: '' });
 };
 
@@ -63,8 +60,9 @@ AddTodo.propTypes = {
 };
 
 
-const mapStateToProps = (state) => ({
-  add: state.add,
-});
+// const mapStateToProps = (state) => ({
+//   add: state.add,
+// });
 
-export default connect(mapStateToProps)(AddTodo);
+// export default connect(mapStateToProps)(AddTodo);
+export default AddTodo;
