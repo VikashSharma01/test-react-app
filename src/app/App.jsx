@@ -10,7 +10,9 @@ import { connect } from 'react-redux';
 // import SimpleCounter from './components/SimpleCounter';
 import addTodo from './components/store/Actions';
 import './App.scss';
-import POCCSVUPLOADER from './components/POCCSVUPLOADER';
+import TestQuiz from './components/TestQuiz';
+// import POCCSVUPLOADER from './components/POCCSVUPLOADER';
+
 
 // const initState = {
 //   count: 0,
@@ -66,9 +68,9 @@ import POCCSVUPLOADER from './components/POCCSVUPLOADER';
 class App extends React.PureComponent {
   render() {
     return (
-      <Container fluid className="App">
+      <Container fluid>
         {/* <h2 className="calculator">Simple Counter & ToDo List</h2> */}
-        <h2 className="calculator">Simple Upload File</h2>
+        {/* <h2 className="calculator text-center">Dare Quiz</h2> */}
         {/* <Row>
           <Col><SimpleCounter /></Col>
         </Row>
@@ -76,7 +78,7 @@ class App extends React.PureComponent {
           <Col><AddToDo /></Col>
         </Row> */}
         <Row>
-          <Col><POCCSVUPLOADER /></Col>
+          <Col><TestQuiz /></Col>
         </Row>
       </Container>
     );
